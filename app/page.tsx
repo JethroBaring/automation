@@ -127,7 +127,7 @@ export default function App() {
           <h1 className="text-3xl font-bold text-gray-800" data-testid="login-title">
             Welcome Back
           </h1>
-          <p className="text-gray-600 mt-2">Please sign in to your account</p>
+          <p className="text-gray-600 mt-2">Please sign in to your account.</p>
         </div>
 
         {error && (
