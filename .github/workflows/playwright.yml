@@ -40,9 +40,23 @@ jobs:
     if: github.ref == 'refs/heads/main' && success()
     
     steps:
-    - name: Deployment Ready
+    - name: Deploy to Dokploy
       run: |
-        echo "✅ Tests passed! Deployment will be triggered by GitHub webhook settings."
-        echo "🚀 Repository: ${{ github.repository }}"
-        echo "📝 Commit: ${{ github.sha }}"
-        echo "👤 Pushed by: ${{ github.actor }}"
+        echo "🚀 Deploying to Dokploy using official API..."
+        response=$(curl -s -w "%{http_code}" -X POST "https://dokploy.jethdev.tech/api/application.deploy" \
+          -H "accept: application/json" \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: ${{ secrets.DOKPLOY_API_TOKEN }}" \
+          -d '{
+            "applicationId": "${{ secrets.DOKPLOY_APP_ID }}"
+          }')
+        
+        http_code=$(echo "$response" | tail -c 4)
+        
+        if [ "$http_code" -ge 200 ] && [ "$http_code" -lt 300 ]; then
+          echo "✅ Deployment triggered successfully! (HTTP $http_code)"
+        else
+          echo "❌ Deployment failed with HTTP $http_code"
+          echo "Response: $response"
+          exit 1
+        fi
