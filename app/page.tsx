@@ -137,7 +137,7 @@ export default function App() {
           </div>
         )}
 
-        <div className="space-y-6" data-testid="login-form">
+        <form onSubmit={handleLogin} className="space-y-6" data-testid="login-form">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
               Email Address
@@ -193,7 +193,7 @@ export default function App() {
               'Sign In'
             )}
           </button>
-        </div>
+        </form>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-600 text-center mb-4">Demo Credentials:</p>
