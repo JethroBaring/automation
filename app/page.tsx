@@ -78,7 +78,7 @@ export default function App() {
             <h1 className="text-2xl font-bold text-gray-800" data-testid="welcome-title">
               Welcome Back!
             </h1>
-            <p className="text-gray-600 mt-2">Login successful</p>
+            <p className="text-gray-600 mt-2">Login successfull</p>
           </div>
 
           <div className="bg-gray-50 rounded-lg p-4 mb-6" data-testid="user-info">
