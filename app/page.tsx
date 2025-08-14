@@ -150,7 +150,7 @@ export default function App() {
                 onChange={handleInputChange}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-colors"
                 placeholder="Enter your email"
-                data-testid="email-inputsdss"
+                data-testid="email-input"
                 disabled={isLoading}
               />
             </div>
