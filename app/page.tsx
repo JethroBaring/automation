@@ -124,9 +124,9 @@ export default function App() {
           <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <LogIn className="w-8 h-8 text-indigo-600" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800" data-testid="login-title">
-            Welcome Back
-          </h1>
+          {/* <h1 className="text-2xl font-bold text-gray-800" data-testid="welcome-title">
+              Welcome Back!
+            </h1> */}
           <p className="text-gray-600 mt-2">Please sign in to your account.</p>
         </div>
 
