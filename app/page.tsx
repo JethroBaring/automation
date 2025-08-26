@@ -130,12 +130,12 @@ export default function App() {
           <p className="text-gray-600 mt-2">Please sign in to your account.</p>
         </div>
 
-        {error && (
+        {/* {error && (
           <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-6 flex items-center space-x-2" data-testid="error-message">
             <AlertCircle className="w-5 h-5 text-red-500" />
             <span className="text-red-700 text-sm">{error}</span>
           </div>
-        )}
+        )} */}
 
         <form onSubmit={handleLogin} className="space-y-6" data-testid="login-form">
           <div>
